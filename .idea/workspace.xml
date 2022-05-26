@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6e2d9ffb-b0ab-43f9-868c-1f7f7414d449" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/HTML-builder.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-copy-directory/files-copy/test-css.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-copy-directory/files-copy/test-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-copy-directory/files-copy/test-js.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-copy-directory/files-copy/test-text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-copy-directory/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/04-copy-directory/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/06-build-page/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/fonts/Karolina-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/img/footer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/img/header.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/img/item1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/img/item2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/img/item3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/img/wildlife-logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/svg/arrow-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/svg/arrow-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/svg/facebook.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/svg/instagram.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/svg/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/svg/pinterest.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/svg/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/assets/svg/telegram.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/06-build-page/project-dist/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="29DIKHrpUitu6n1yREN4lS6jVtY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/denislogimahov/Documents/MyWork/HTML-builder",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/06-build-page" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e2d9ffb-b0ab-43f9-868c-1f7f7414d449" name="Changes" comment="" />
+      <created>1652641163362</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652641163362</updated>
+      <workItem from="1652641164546" duration="5023000" />
+      <workItem from="1652680053630" duration="13510000" />
+      <workItem from="1652731177192" duration="14154000" />
+      <workItem from="1652854898413" duration="19268000" />
+      <workItem from="1652937230203" duration="13775000" />
+      <workItem from="1653585589085" duration="4668000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -34,5 +34,3 @@ fs.readdir(path.join(__dirname, 'files'), {withFileTypes: true}, (error, dirEntr
     console.error(error);
   }
 });
-
-

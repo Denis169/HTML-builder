@@ -1,25 +1,29 @@
-const fs = require('fs');
-const fsPromises = fs.promises;
-const path = require('path');
+import { promises, createWriteStream, readdir, createReadStream, copyFile } from 'fs';
+const fsPromises = promises;
+import { join, resolve, extname, relative } from 'path';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const route = path.join(__dirname, 'template.html');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
+const route = join(__dirname, 'template.html');
 
 (async function () {
 
   // Create dir 'project-dist'
 
-  await fsPromises.access(path.join(__dirname, 'project-dist'))
+  await fsPromises.access(join(__dirname, 'project-dist'))
     .then(() => console.log('folder already create'))
     .catch(async () => {
-      await fsPromises.mkdir(path.join(__dirname, 'project-dist'))
+      await fsPromises.mkdir(join(__dirname, 'project-dist'))
         .then(() => console.log('folder create successfully'))
         .catch((error) => console.log(error));
     });
 
   // Create index.html
 
-  const writeableStream = fs.createWriteStream(path.resolve(__dirname, 'project-dist', 'index.html'));
+  const writeableStream = createWriteStream(resolve(__dirname, 'project-dist', 'index.html'));
 
   await fsPromises.readFile(route, 'utf-8')
     .then (async (data) => {
@@ -28,12 +32,12 @@ const route = path.join(__dirname, 'template.html');
 
       for (let i = 0; i < array.length; i++) {
         if (regExp.test(array[i].trim())) {
-          await fsPromises.readdir(path.join(__dirname, 'components'), {withFileTypes: true})
+          await fsPromises.readdir(join(__dirname, 'components'), {withFileTypes: true})
             .then(async (dirEntryList) => {
               for (const dirEntry of dirEntryList) {
                 if (!dirEntry.isDirectory()) {
                   if (dirEntry.name === array[i].replace(/\W/g, '') + '.html') {
-                    const routeComponent = path.join(__dirname, 'components', `${dirEntry.name}`);
+                    const routeComponent = join(__dirname, 'components', `${dirEntry.name}`);
 
                     await fsPromises.readFile(routeComponent, 'utf-8')
                       .then((data) => writeableStream.write(data + '\n'))
@@ -52,15 +56,15 @@ const route = path.join(__dirname, 'template.html');
 
   // Create style.css
 
-  fs.readdir(path.join(__dirname, 'styles'), {withFileTypes: true}, (error, dirEntryList) => {
+  readdir(join(__dirname, 'styles'), {withFileTypes: true}, (error, dirEntryList) => {
     try {
 
-      const writeableStreamCss = fs.createWriteStream(path.join(__dirname, 'project-dist', 'style.css'));
+      const writeableStreamCss = createWriteStream(join(__dirname, 'project-dist', 'style.css'));
 
       dirEntryList.forEach((dirEntry) => {
-        const route = path.join(__dirname, 'styles', `${dirEntry.name}`);
-        if (dirEntry.isFile() && path.extname(route) === '.css') {
-          const readableStream = fs.createReadStream(route, {encoding: 'utf-8'});
+        const route = join(__dirname, 'styles', `${dirEntry.name}`);
+        if (dirEntry.isFile() && extname(route) === '.css') {
+          const readableStream = createReadStream(route, {encoding: 'utf-8'});
           readableStream.on('data', data => writeableStreamCss.write(data));
         }
       });
@@ -76,7 +80,7 @@ const route = path.join(__dirname, 'template.html');
   async function copyFiles(dirEntryList, route) {
     for (const dirEntry of dirEntryList) {
       if (dirEntry.isDirectory()) {
-        const routeNew = path.join(route, dirEntry.name);
+        const routeNew = join(route, dirEntry.name);
         let routeIn = routeNew.replace('/project-dist', '');
         await fsPromises.access(routeNew)
           .then(async () => {
@@ -95,28 +99,28 @@ const route = path.join(__dirname, 'template.html');
               .catch((error) => console.log(error));
           });
       } else {
-        const routeIn = path.join(route, dirEntry.name).replace('/project-dist', '');
-        const routeOut = path.join(route, dirEntry.name);
-        fs.copyFile(routeIn, routeOut, (err) => {
+        const routeIn = join(route, dirEntry.name).replace('/project-dist', '');
+        const routeOut = join(route, dirEntry.name);
+        copyFile(routeIn, routeOut, (err) => {
           if (err) {
             console.error('Cannot copy ' +dirEntry.name+ ' into ' +routeOut+ ' - error: ', err);
             return;
           }
-          const routeDescribeIn = path.relative(route, routeIn);
-          const routeDescribeOut = path.relative(routeIn, routeOut);
+          const routeDescribeIn = relative(route, routeIn);
+          const routeDescribeOut = relative(routeIn, routeOut);
           console.log('FILE: Placed ' +routeDescribeIn+ ' into ' +routeDescribeOut+ '.');
         });
       }
     }
   }
 
-  await fsPromises.readdir(path.join(__dirname, 'assets'), {withFileTypes: true})
+  await fsPromises.readdir(join(__dirname, 'assets'), {withFileTypes: true})
     .then(async (dirEntryList) => {
-      let route = path.join(__dirname, 'project-dist', 'assets');
-      await fsPromises.access(path.join(route))
+      let route = join(__dirname, 'project-dist', 'assets');
+      await fsPromises.access(join(route))
         .then(() => console.log('assets already create'))
         .catch(async () => {
-          await fsPromises.mkdir(path.join(route))
+          await fsPromises.mkdir(join(route))
             .then(() => console.log('folder assets create successfully'))
             .catch((error) => console.log(error));
         });
